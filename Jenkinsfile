@@ -3,9 +3,8 @@ pipeline{
     stages{
         stage("Build"){
             steps{
-                chmod u+x './test.sh'
-                sh './test.sh'
-            }
+                git 'https://github.com/NhoangPhung0809/webhook.git'
+             }
         }
     }
 }
