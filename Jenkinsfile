@@ -4,7 +4,7 @@ pipeline{
         stage("Build"){
             echo "Build..."
             steps{
-                 py magane.py runsrver
+                 py 'magane.py runsrver'
             }
         }
     }
