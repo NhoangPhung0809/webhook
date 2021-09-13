@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage("Build"){
             steps{
-                git 'https://github.com/NhoangPhung0809/webhook.git'
+                sh './test.sh'
              }
         }
     }
