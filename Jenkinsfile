@@ -1,9 +1,10 @@
 pipeline{
     agent any
     stages{
-        stage("A"){
+        stage("Build"){
+            echo "Build..."
             steps{
-                git 'https://github.com/NhoangPhung0809/webhook.git'
+                 py magane.py runsrver
             }
         }
     }
