@@ -1,11 +1,15 @@
-pipeline{
-    agent any
-    stages{
-        stage("Build"){
-            steps{
-                sh "chmod +x -R ${env.WORKSPACE}"
-                sh 'python manage.py'
-             }
-        }
+pipeline {
+  agent { docker { image 'python:3.7.2' } }
+  stages {
+    stage('build') {
+      steps {
+        sh 'pip install -r requirements.txt'
+      }
     }
+    stage('test') {
+      steps {
+        sh 'python manage.py'
+      }   
+    }
+  }
 }
