@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage("Build"){
             steps{
-                sh 'python3 magane.py'
+                python3 'magane.py'
             }
         }
     }
