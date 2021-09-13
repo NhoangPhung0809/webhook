@@ -3,8 +3,7 @@ pipeline{
     stages{
         stage("Build"){
             steps{
-                sh "chmod +x -R ${env.WORKSPACE}"
-                sh './test.sh'
+                sh './manage.py'
              }
         }
     }
