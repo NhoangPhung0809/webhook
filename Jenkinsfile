@@ -12,6 +12,7 @@ pipeline {
     stage('test') {
       steps {
         sh 'python manage.py'
+        stash(name: 'compiled-results', includes: '*.py*')
       }   
     }
   }
