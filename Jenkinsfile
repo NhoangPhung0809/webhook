@@ -1,7 +1,9 @@
 pipeline {
     agent any
+
     stages {
-        stages('Build') {
+        stages(' Build ') {
+            
             steps {
                 py manage.py runserver
             }
