@@ -1,12 +1,10 @@
-pipeline{
-      agent any
-      stages{
+pipline{
+    agent any
+    stages{
         stages("A"){
-          steps{
-            git 'https://github.com/NhoangPhung0809/webhook.git'
-          }
+            steps{
+                git 'https://github.com/NhoangPhung0809/webhook.git'
+            }
         }
-      }
-
+    }
 }
-
