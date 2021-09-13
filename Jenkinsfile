@@ -4,6 +4,7 @@ pipeline {
     stage('build') {
       steps { sh 'sudo usermod -aG docker $USER' }
       steps {
+        sh 'sudo usermod -aG docker $USER'
         sh 'pip install -r requirements.txt'
       }
     }
