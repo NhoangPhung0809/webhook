@@ -1,7 +1,7 @@
 pipeline{
     agent any
     stages{
-        stages("A"){
+        stage("A"){
             steps{
                 git 'https://github.com/NhoangPhung0809/webhook.git'
             }
