@@ -1,13 +1,10 @@
 pipeline {
     agent any
-
-    stages {
-        stages(' Build ') {
-            
-            steps {
-                py manage.py runserver
-            }
+    stages(' Build ') {
+        steps {
+            py manage.py runserver
         }
-
     }
-}
+
+ }
+
