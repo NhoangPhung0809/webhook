@@ -1,10 +1,12 @@
 pipeline {
     agent any
     stages {
-      stages(' Build ') {
-          echo "Build...."
-         }
-    }
+      stages('clone code') {
+          steps{
+            git 'https://github.com/NhoangPhung0809/web-jenkinsfile.git'
 
+          }
+        }
+    }
 }
 
