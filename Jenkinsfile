@@ -4,6 +4,7 @@ pipeline {
         stage('Test...') {
             steps {
                 sh 'python --version'
+                echo 'toi day chua'
             }
         }
         stage('build...') {
