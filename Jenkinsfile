@@ -1,10 +1,12 @@
 pipeline {
-    agent { docker { image 'python:3.5.1' } }
+    agent any
+    tools {
+        python 'python'
+    }
     stages {
         stage('Test...') {
             steps {
                 sh 'python --version'
-                echo 'toi day chua'
             }
         }
         stage('build...') {
