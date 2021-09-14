@@ -3,11 +3,11 @@ pipeline {
     stages {
         stage('Test Python') {
             steps{
-                echo 'Python test......'
+                echo 'Python test.!.!.!.!.!.'
                 sh 'python --version'
                 }
             }
-        stage('build.!.!.!.') {
+        stage('build') {
             steps {
                 echo 'Build.......'
                 sh 'python manage.py'
