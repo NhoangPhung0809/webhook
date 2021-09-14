@@ -5,6 +5,8 @@ pipeline {
             steps{
                 echo 'Python test......'
                 sh 'pythn --version'
+                }
+            }
         stage('build.!.!.!.') {
             steps {
                 echo 'Build.......'
