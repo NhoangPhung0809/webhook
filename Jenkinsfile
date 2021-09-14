@@ -1,16 +1,33 @@
 pipeline {
+
     agent none
-    stages (fix) {
-        stage {
-            sh "sudo chown root:jenkins /run/docker.sock"
-        }
-    }
-    agent { docker { image 'python:3.5.1' } }
+
     stages {
-        stage ('buid') {
+
+        stage("Fix the permission issue") {
+
+            agent any
+
             steps {
-                sh 'python manage.py'
+                sh "sudo chown root:jenkins /run/docker.sock"
             }
+
         }
+
+        stage('Step 1') {
+
+            agent {
+                docker {
+                    image 'nezarfadle/tools'
+                    reuseNode true
+                }
+            }
+
+            steps {
+                sh "ls /"
+            }
+
+        }
+
     }
 }
