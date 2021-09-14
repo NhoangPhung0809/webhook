@@ -1,6 +1,7 @@
 pipeline {
     agent none
     stages (fix) {
+        stage {
             sh "sudo chown root:jenkins /run/docker.sock"
         }
     }
