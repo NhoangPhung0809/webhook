@@ -1,9 +1,6 @@
 pipeline {
     agent any
-    tools {
-        python 'python'
-    }
-    stages {
+       stages {
         stage('Test...') {
             steps {
                 sh 'python --version'
