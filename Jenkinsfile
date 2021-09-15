@@ -12,7 +12,6 @@ pipeline {
         stage('install...django...') {
             steps {
                 sh 'python3 -m venv env'
-                source './env/bin/activate' 
                 echo 'Install....'
                 sh 'pip3 install Django' 
                 }
