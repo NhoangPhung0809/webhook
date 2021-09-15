@@ -1,11 +1,12 @@
 pipeline {
     agent { docker { image 'python:3.5.1' } }
     stages {
-        stage{
-            steps{
+         stage('update') {
+            steps {
+                echo 'Update.......'
                 sh 'pip install --upgrade pip'
-                }
             }
+         }
         stage('Test...Python') {
             steps{
                 echo 'Python test.!.!.!.!.!.'
