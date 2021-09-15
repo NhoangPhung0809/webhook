@@ -5,7 +5,6 @@ pipeline {
             steps{
                 echo 'Python test.!.!.!.!.!.'
                 sh 'python --version'
-                sh 'pip install -r requirements.txt'
                 }
             }
         stage('install...django...') {
