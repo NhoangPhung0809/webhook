@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage('Test...Python') {
             steps{
+                env.WORKSPACE = pwd()
                 echo 'Python test.!.!.!.!.!.'
                 sh 'python --version'
                 sh 'virtualenv --python=python34 venv'
