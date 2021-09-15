@@ -4,8 +4,8 @@ pipeline {
          stage('update') {
             steps {
                 echo 'Update.......'
-                sh 'mkdir /.cache/pip'
-                sh 'touch http '
+                sh 'cd /.cache/'
+                sh 'mkdir pip '
                 
             }
          }
