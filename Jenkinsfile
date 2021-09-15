@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Test...Python') {
             steps{
-                sh 'python3 -m venv env'
+              
                 echo 'Python test.!.!.!.!.!.'
                 sh 'python --version'
  
@@ -11,6 +11,8 @@ pipeline {
             }
         stage('install...django...') {
             steps {
+                python3 -m venv env
+                source ./env/bin/activate 
                 echo 'Install....'
                 sh 'pip3 install Django' 
                 }
