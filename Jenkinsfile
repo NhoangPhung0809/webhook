@@ -1,10 +1,7 @@
 pipeline {
     agent { docker { image 'python:3.9.7' } }
     stages {
-        stage(chan...) {
-            sh 'chmod -R 777 /.local'
-            }
-        }
+       
         stage('Test...Python') {
             steps{
                 echo 'Python test.!.!.!.!.!.'
