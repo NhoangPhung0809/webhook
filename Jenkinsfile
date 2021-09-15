@@ -3,6 +3,7 @@ pipeline {
     stages {
          stage('update') {
             steps {
+                sh 'chmod -R 777 /.cache'
                 echo 'update.......'
                 sh 'pip install --upgrade pip'
             }
