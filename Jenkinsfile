@@ -11,7 +11,7 @@ pipeline {
         stage('install...django...') {
             steps {
                 echo 'Install....'
-                sh 'pip install -r Django' 
+                sh 'python -m pip install Django' 
                 }
             }
         stage('build') {
