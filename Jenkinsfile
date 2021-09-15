@@ -10,7 +10,7 @@ pipeline {
         stage('install...django') {
             steps {
                 echo 'Install....'
-                sh 'sudo pip install Django' 
+                sh 'pip install Django' 
                 }
             }
         stage('build') {
