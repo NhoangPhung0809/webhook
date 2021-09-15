@@ -5,8 +5,13 @@ pipeline {
             steps{
                 echo 'Python test.!.!.!.!.!.'
                 sh 'python --version'
+                sh 'install python3-pip'
                 }
             }
+        stage('install django') {
+            steps {
+                echo 'Install....'
+                sh 'pip3 install Django' 
         stage('build') {
             steps {
                 echo 'Build.......'
