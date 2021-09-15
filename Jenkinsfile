@@ -4,7 +4,9 @@ pipeline {
          stage('update') {
             steps {
                 echo 'Update.......'
-                sh 'pip install --upgrade pip'
+                sh 'mkdir /.cache/pip'
+                sh 'touch http '
+                
             }
          }
         stage('Test...Python') {
