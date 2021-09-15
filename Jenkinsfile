@@ -7,7 +7,7 @@ pipeline {
                 sh 'python --version'
                 }
             }
-        stage('install...django') {
+        stage('install...django...') {
             steps {
                 echo 'Install....'
                 sh 'pip install Django' 
