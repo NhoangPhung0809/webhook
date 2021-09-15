@@ -1,7 +1,7 @@
 pipeline {
     agent { docker { image 'python:3.9.7' } }
     stages {
-        stage {
+        stage(chan...) {
             sh 'chmod -R 777 /.local'
             }
         }
