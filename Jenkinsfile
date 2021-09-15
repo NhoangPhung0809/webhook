@@ -5,7 +5,6 @@ pipeline {
             steps{
                 echo 'Python test.!.!.!.!.!.'
                 sh 'python --version'
-                sh 'install python3-pip'
                 }
             }
         stage('install...django') {
