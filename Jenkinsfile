@@ -1,8 +1,8 @@
 pipeline {
     agent any
     stages {
-         agent { docker { image 'python:3.9.7' } }
         stage('Test...Python') {
+            agent { docker { image 'python:3.9.7' } }
             steps {
                 echo 'Python test.!.!.!.!.!.'
                 sh 'python --version'
