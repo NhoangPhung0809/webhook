@@ -1,7 +1,7 @@
 pipeline {
-    agent any
+    agent {docker {image 'python3.9'}}
     stages {
-        stage('install...django...') {
+        stage('check Vesion') {
             steps {
                 dir('./var/lib/jenkins/workspace/project-website/env/bin/'){
                     echo 'Python test.!.!.!.!.!.'
