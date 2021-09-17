@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-         agnt { docker { image 'python:3.9.7' } }
+         agent { docker { image 'python:3.9.7' } }
         stage('Test...Python') {
             steps {
                 echo 'Python test.!.!.!.!.!.'
