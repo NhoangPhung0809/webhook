@@ -4,6 +4,7 @@ pipeline {
         stage('Test...Python') {
             steps {
                 echo 'Python test.!.!.!.!.!.'
+                sh 'install python3.7'
                 sh 'python --version'
                 }
             }
