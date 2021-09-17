@@ -12,7 +12,7 @@ pipeline {
         stage('build') {
             steps {
                 echo 'Build.......'
-                sh 'python3 manage.py'
+                sh 'python3 manage.py runserver'
             }
         }
     }
