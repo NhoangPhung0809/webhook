@@ -1,5 +1,5 @@
 pipeline {
-    agent {docker {image 'python3.9'}}
+    agent any
     stages {
         stage('check Vesion') {
             steps {
