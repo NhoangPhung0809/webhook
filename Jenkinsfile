@@ -10,7 +10,7 @@ pipeline {
             }
         stage('install...django...') {
             steps {
-                dir(/var/lib/jenkins/workspace/project-website/env/bin/){
+                dir('./var/lib/jenkins/workspace/project-website/env/bin/'){
                     sh 'python3 -m venv env'
                     echo 'Install....'
                     sh 'pip3 install Django' 
