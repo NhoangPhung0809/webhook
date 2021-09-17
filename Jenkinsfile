@@ -1,12 +1,11 @@
 pipeline {
-    agent { docker { image 'python:3.9.7' } }
+    agent any
     stages {
+         agnet { docker { image 'python:3.9.7' } }
         stage('Test...Python') {
-            steps{
-              
+            steps {
                 echo 'Python test.!.!.!.!.!.'
                 sh 'python --version'
- 
                 }
             }
         stage('install...django...') {
